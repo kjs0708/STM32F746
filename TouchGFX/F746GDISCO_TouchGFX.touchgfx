@@ -1,0 +1,186 @@
+{
+  "Application": {
+    "Screens": [
+      {
+        "Name": "screen",
+        "Components": [
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Width": 480,
+            "Height": 272,
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2",
+            "X": 186,
+            "Y": 234,
+            "Width": 256,
+            "Height": 30,
+            "TextId": "__SingleUse_MOBP",
+            "TextRotation": "0",
+            "Color": {
+              "Blue": 255
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea2_1",
+            "X": 184,
+            "Y": 204,
+            "Width": 256,
+            "Height": 30,
+            "TextId": "__SingleUse_8LA4",
+            "TextRotation": "0"
+          },
+          {
+            "Type": "Image",
+            "Name": "image2",
+            "X": 31,
+            "Y": 136,
+            "Width": 107,
+            "Height": 119,
+            "RelativeFilename": "KJS0708.png"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel1",
+            "X": 55,
+            "Y": 18,
+            "Width": 370,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_50_large_round_inactive.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_50_large_round_inactive.png",
+            "TextId": "__SingleUse_G12C",
+            "ReleasedColor": {
+              "Red": 21,
+              "Green": 11,
+              "Blue": 212
+            },
+            "PressedColor": {
+              "Red": 217,
+              "Green": 33,
+              "Blue": 33
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_50\\large_round_inactive.json"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "buttonLEDOnOff",
+            "X": 14,
+            "Y": 72,
+            "Width": 55,
+            "Height": 60,
+            "Pressed": "led_on.png",
+            "Released": "led_off.png"
+          },
+          {
+            "Type": "AnimatedImage",
+            "Name": "animatedImage",
+            "X": 192,
+            "Y": 68,
+            "Width": 240,
+            "Height": 136,
+            "FileNameFirst": "logo_240_136.png",
+            "FileNameLast": "logo_240_136.png",
+            "UpdateTicksInterval": 10,
+            "StartOnLoad": true
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction1",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel1"
+            },
+            "Action": {
+              "Type": "ActionSetLabelColors",
+              "PressedColor": {
+                "Red": 227,
+                "Green": 16,
+                "Blue": 48
+              },
+              "ReleasedColor": {
+                "Red": 19,
+                "Green": 70,
+                "Blue": 237
+              },
+              "ActionComponent": "buttonWithLabel1"
+            }
+          },
+          {
+            "InteractionName": "Interaction2",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonLEDOnOff"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "LEDOnOff"
+            }
+          }
+        ]
+      }
+    ],
+    "CustomContainerDefinitions": [],
+    "Name": "MyApplication",
+    "Resolution": {
+      "Width": 480,
+      "Height": 272
+    },
+    "SelectedColorDepth": 16,
+    "StartupScreenName": "screen",
+    "SelectedStartupLanguage": "GB",
+    "TouchGfxPath": "../Middlewares/ST/touchgfx",
+    "UIPath": ".",
+    "AvailableColorDepths": [
+      16
+    ],
+    "AvailableLCDs": {
+      "16": "LCD16bpp"
+    },
+    "AvailableSections": [
+      "ExtFlashSection",
+      "IntFlashSection"
+    ],
+    "AvailableResolutions": [
+      {
+        "Width": 480,
+        "Height": 272
+      }
+    ],
+    "PhysicalButtons": [],
+    "FrameworkFeatures": {
+      "LCD16bpp": {
+        "Id": "LCD16bpp",
+        "IsEnabled": true
+      }
+    },
+    "GenerateAssetsCommand": "make -f simulator/gcc/Makefile assets -j8",
+    "PostGenerateCommand": "touchgfx update_project --project-file=simulator/msvs/Application.vcxproj",
+    "PostGenerateTargetCommand": "touchgfx update_project",
+    "CompileSimulatorCommand": "make -f simulator/gcc/Makefile -j8",
+    "RunSimulatorCommand": "build\\bin\\simulator.exe",
+    "LandscapeSkinX": 0,
+    "LandscapeSkinY": 0,
+    "PortraitSkinX": 0,
+    "PortraitSkinY": 0,
+    "DisplayOrientation": "Landscape",
+    "Family": "STM32F7",
+    "SubFamily": "STM32F7x6",
+    "Toolchain": "STM32CubeIDE",
+    "Platform": "m7",
+    "ProjectFile": "../F746GDISCO_TouchGFX.ioc",
+    "OptionalComponentsRoot": "../Middlewares/ST/touchgfx_components",
+    "OptionalComponents": [],
+    "AdditionalFeatures": []
+  },
+  "Version": "4.21.1"
+}

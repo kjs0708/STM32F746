@@ -224,7 +224,7 @@ int main(void)
   MX_TouchGFX_PreOSInit();
   /* USER CODE BEGIN 2 */
   BSP_SDRAM_Init();
-  printf("[KJS0708] STM32F746G-DISCO TouchGFX Test!!\r\n");
+  printf("[KJS0708] STM32F746G-DISCO Board TouchGFX Test!!\r\n");
 
   /* USER CODE END 2 */
 
